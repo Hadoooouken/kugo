@@ -23,6 +23,7 @@
   &__box {
     position: relative;
     display: flex;
+    align-items: center;
     width: 100%;
     flex-grow: 1;
     border: rem(2) solid var(--color-secondary);
@@ -37,4 +38,8 @@
     font-size: 14px;
     padding: rem(4) rem(12);
   }
+
+  &__input:focus-visible {
+outline: none;
+  }  
 }

@@ -22,6 +22,7 @@ h2, .h2 {
   @include fluid-text(35, 25);
 
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 h3, .h3 {

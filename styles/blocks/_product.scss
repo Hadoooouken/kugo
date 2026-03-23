@@ -1,0 +1,8 @@
+@use '../helpers' as *;
+
+.product {
+  &__title {
+    text-align: center;
+    margin-block-end: rem(50);
+  }
+}

@@ -2,11 +2,12 @@
 
 .hero {
   color: var(--color-light);
+  margin-block-end: rem(70);
 
   &__bg {
     padding: rem(58) rem(136);
     background:
-    linear-gradient(42deg, #6f73ee 20%, rgba(111, 115, 238, 0) 67%),
+      linear-gradient(42deg, #6f73ee 20%, rgba(111, 115, 238, 0) 67%),
       url('../../images/hero-bg.jpg') no-repeat center / cover;
     border-radius: rem(10);
   }
@@ -28,12 +29,12 @@
     opacity: 0.7;
   }
 
-  &__tittle {
+  &__title {
     text-transform: uppercase;
     margin-block-end: rem(6);
   }
 
-  &__subtittle {
+  &__subtitle {
     font-weight: 400;
     font-size: rem(20);
     margin-block-end: rem(28);
