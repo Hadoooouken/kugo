@@ -1,0 +1,76 @@
+@use '../helpers' as *;
+
+.hero {
+  color: var(--color-light);
+
+  &__bg {
+    padding: rem(58) rem(136);
+    background:
+    linear-gradient(42deg, #6f73ee 20%, rgba(111, 115, 238, 0) 67%),
+      url('../../images/hero-bg.jpg') no-repeat center / cover;
+    border-radius: rem(10);
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: rem(8);
+    margin-block-end: rem(16);
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: rem(12);
+  }
+
+  &__time {
+    font-size: rem(12);
+    opacity: 0.7;
+  }
+
+  &__tittle {
+    text-transform: uppercase;
+    margin-block-end: rem(6);
+  }
+
+  &__subtittle {
+    font-weight: 400;
+    font-size: rem(20);
+    margin-block-end: rem(28);
+  }
+
+  &__advantages {
+    line-height: 1.29;
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    column-gap: rem(46);
+    margin-block-end: rem(36);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    max-width: rem(194);
+    column-gap: rem(15);
+  }
+
+  &__wrapper {
+    @include square(40px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+    border-radius: 5px;
+  }
+
+  &__wrapper::after {
+    position: absolute;
+    content: ' ';
+    inset: 0;
+    background-color: var(--color-light);
+    opacity: 0.2;
+    border-radius: 5px;
+  }
+}

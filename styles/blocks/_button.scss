@@ -1,18 +1,25 @@
 @use '../helpers' as *;
 .button {
   border: none;
+  border-radius: rem(5);
+  font-size: rem(16);
 
   &--primary {
     display: flex;
     align-items: center;
-    border-radius: rem(5);
     background-color: var(--color-secondary);
     color: var(--color-light);
     column-gap: rem(14);
+    font-weight: 500;
+  }
+
+  &--sm {
+    padding: rem(8) rem(16);
   }
 
   &--md {
-    padding: rem(6) rem(14);
+    padding: rem(14.4) rem(42);
+    font-weight: 400;
   }
 
   &--search {
@@ -21,9 +28,12 @@
     top: 0;
     padding: rem(12);
     height: 100%;
-    border-radius:0;
-    
-    
+    border-radius: 0;
+  }
+
+  &--light {
+    background-color: var(--color-light);
+    color: var(--color-secondary);
   }
 
   &--transparent {

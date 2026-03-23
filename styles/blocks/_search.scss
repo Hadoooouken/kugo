@@ -1,6 +1,8 @@
 @use '../helpers' as *;
 
 .search {
+  margin-block-end: rem(40);
+
   &__wrapper {
     display: flex;
     align-items: center;
@@ -25,14 +27,14 @@
     flex-grow: 1;
     border: rem(2) solid var(--color-secondary);
     border-radius: rem(5);
-    padding: rem(5);
-    // margin-inline: rem(20) rem(48);
+    padding: rem(4);
   }
+
   &__input {
     border: none;
     flex-grow: 1;
     font-weight: 400;
     font-size: 14px;
-    padding: rem(4) rem(18);
+    padding: rem(4) rem(12);
   }
 }
