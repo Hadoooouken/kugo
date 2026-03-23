@@ -1,0 +1,19 @@
+@use 'helpers' as *;
+
+:root {
+  --color-light: #fff;
+  --color-dark: #282739;
+  --color-secondary: #6f73ee;
+  --color-gray: #5d6c7b;
+  --color-green: #75d14a;
+  --color-red: #ee685f;
+
+  --font-family-base: 'Jost', sans-serif;
+  --font-family-accent: 'Roboto', sans-serif;
+
+  --container-width: #{rem(1110)};
+  --container-padding-x: #{rem(30)};
+  --border: 1px solid #ecf3ff;
+
+  --transition-duration: 0.2s;
+}

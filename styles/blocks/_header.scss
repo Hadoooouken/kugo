@@ -1,0 +1,40 @@
+@use '../helpers' as *;
+
+.header {
+  border-bottom: var(--border);
+  padding-block: rem(6);
+  margin-block-end: rem(28);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav-wrapper {
+    display: flex;
+    column-gap: rem(30);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-list {
+    display: flex;
+    column-gap: rem(30);
+  }
+
+  &__nav-link {
+    color: var(--color-gray);
+    text-decoration: none;
+    font-size: rem(12);
+    font-weight: 400;
+  }
+
+  &__contacts {
+    font-size: rem(12);
+    font-weight: 500;
+  }
+}

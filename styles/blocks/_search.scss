@@ -1,0 +1,38 @@
+@use '../helpers' as *;
+
+.search {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+  }
+
+  &__actions {
+    display: flex;
+    column-gap: rem(10);
+    margin-left: rem(22);
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    margin-right: rem(16);
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    border: rem(2) solid var(--color-secondary);
+    border-radius: rem(5);
+    padding: rem(5);
+    // margin-inline: rem(20) rem(48);
+  }
+  &__input {
+    border: none;
+    flex-grow: 1;
+    font-weight: 400;
+    font-size: 14px;
+    padding: rem(4) rem(18);
+  }
+}

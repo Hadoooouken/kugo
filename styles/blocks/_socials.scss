@@ -1,0 +1,12 @@
+@use '../helpers' as *;
+
+.socials {
+    display: flex;
+    column-gap: rem(8);
+      align-items: center;
+
+    &__link {
+        color: var(--color-gray);
+        
+    }
+}
