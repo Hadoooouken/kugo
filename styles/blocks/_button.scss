@@ -23,6 +23,13 @@
     font-weight: 400;
   }
 
+  &--lg {
+    width: 100%;
+    padding: rem(10) rem(30);
+    font-size: rem(12);
+    font-weight: 400;
+  }
+
   &--search {
     position: absolute;
     right: 0;
@@ -45,6 +52,20 @@
     font-weight: 500;
     font-size: rem(14);
     color: var(--color--dark);
+  }
+
+  &--corner {
+    @include square(40px);
+    @include flex-center;
+    border-radius: 100%;
+    border: var(--border);
+    background-color: transparent;
+  }
+
+  &--bg-light {
+    @include square(35px);
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.2);
   }
 
   &__icon {

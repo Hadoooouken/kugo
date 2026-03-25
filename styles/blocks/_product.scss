@@ -1,8 +1,110 @@
 @use '../helpers' as *;
 
 .product {
+  &__image-container {
+    position: relative;
+  }
+  &__badges {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+  }
+
+  &__badge {
+    padding: rem(4) rem(9);
+    color: var(--color-light);
+    border-radius: 5px;
+    font-size: rem(12);
+    text-transform: uppercase;
+  }
+
+  &__badge--red {
+    background-color: #ee685f;
+  }
+
+  &__badge--green {
+      text-transform: none;
+    background-color: #75d14a;
+  }
+
+  &__controls {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+  }
+
   &__title {
     text-align: center;
     margin-block-end: rem(50);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: rem(30);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+    max-width: rem(255);
+    border: rem(1.5) solid var(--color-light-gray);
+    border-radius: 10px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    row-gap: rem(20);
+    padding-inline: rem(24);
+    padding-block-end: rem(16);
+  }
+
+  &__description-list {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: column;
+    gap: rem(8) rem(19);
+  }
+
+  &__description-item {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+    font-weight: 400;
+    font-size: rem(14);
+    color: var(--color-gray);
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price-full {
+    font-weight: 500;
+    font-size: rem(12);
+    text-decoration: line-through;
+    color: var(--color-gray);
+  }
+
+  &__price-sale {
+    font-weight: 600;
+    font-size: rem(20);
+    color: var(--color-dark);
+  }
+
+  &__item-actions {
+    display: flex;
+    column-gap: rem(10);
   }
 }

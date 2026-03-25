@@ -8,24 +8,37 @@ body {
   background-color: var(--color-light);
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5 {
-    font-family: var(--font-family-base);
-    
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-family: var(--font-family-base);
 }
 
-h1, .h1,
-h2, .h2 {
+h1,
+.h1,
+h2,
+.h2 {
   @include fluid-text(35, 25);
 
   font-weight: 600;
   text-transform: uppercase;
 }
 
-h3, .h3 {
-     @include fluid-text(20, 15);
-    font-weight: 500
+h3,
+.h3 {
+  @include fluid-text(20, 15);
+  font-weight: 500;
+}
+
+h4,
+.h4 {
+  @include fluid-text(18, 13);
+  font-weight: 600;
 }
