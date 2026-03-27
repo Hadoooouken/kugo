@@ -30,6 +30,11 @@
     font-weight: 400;
   }
 
+  &--extra-lg {
+    font-weight: 400;
+    padding: rem(14) rem(25)
+  }
+
   &--search {
     position: absolute;
     right: 0;

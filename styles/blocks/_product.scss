@@ -1,6 +1,8 @@
 @use '../helpers' as *;
 
 .product {
+  margin-block-end: rem(100);
+  
   &__image-container {
     position: relative;
   }
@@ -23,7 +25,7 @@
   }
 
   &__badge--green {
-      text-transform: none;
+    text-transform: none;
     background-color: #75d14a;
   }
 
