@@ -1,6 +1,8 @@
 @use '../helpers' as *;
+
 .contacts {
   color: var(--color-dark);
   text-decoration: none;
   font-style: normal;
+  font-weight: 500;
 }

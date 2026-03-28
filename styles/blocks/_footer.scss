@@ -1,0 +1,117 @@
+@use '../helpers' as *;
+
+.footer {
+  padding-block: rem(46) rem(75);
+  background-color: var(--color-light-cta);
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-block-end: rem(70);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(18);
+  }
+
+  &__title {
+    font-size: rem(18);
+    text-transform: none;
+  }
+
+  &__list {
+    display: grid;
+    gap: rem(10) rem(36);
+  }
+
+  &__list--2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &-rows {
+      grid-template-rows: repeat(4, 1fr);
+      grid-auto-flow: column;
+    }
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: rem(14);
+    margin-inline-end: rem(20);
+  }
+
+  &__link {
+    color: var(--color-gray);
+    text-decoration: none;
+  }
+
+  &__contacts-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(4);
+  }
+
+  &__contacts {
+    font-size: rem(16);
+  }
+
+  &__muted {
+    font-weight: 400;
+    font-size: rem(12);
+    color: var(--color-gray);
+  }
+
+  &__contacts-text {
+    font-weight: 400;
+    font-size: rem(12);
+    color: var(--color-dark);
+  }
+
+  &__socials-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--color-gray);
+    padding-block: rem(34) rem(28);
+    border-inline: none;
+  }
+
+  &__logo {
+    padding-inline-end: rem(49);
+  }
+
+  &__links {
+    display: flex;
+    column-gap: rem(44);
+  }
+
+  &__badges {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+  }
+
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    padding-block: rem(12);
+  }
+
+  &__badges-2 {
+    display: flex;
+    column-gap: rem(38);
+    align-items: center;
+  }
+
+  &__payment-list {
+    display: flex;
+    column-gap: rem(4);
+  }
+
+  &__badges-socials {
+    display: flex;
+    column-gap: rem(15);
+    align-items: center;
+  }
+}

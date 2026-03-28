@@ -1,6 +1,8 @@
 @use '../helpers' as *;
 
 .cta {
+  margin-block-end: rem(100);
+  
   &__content {
     padding-block-start: rem(86);
     padding-block-end: rem(76);

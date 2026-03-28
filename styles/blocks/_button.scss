@@ -32,7 +32,11 @@
 
   &--extra-lg {
     font-weight: 400;
-    padding: rem(14) rem(25)
+    padding: rem(14) rem(25);
+  }
+
+  &--extra-sm {
+    padding: rem(14) rem(24);
   }
 
   &--search {
@@ -88,5 +92,12 @@
   &__line:nth-child(3) {
     align-self: flex-end;
     width: 50%;
+  }
+
+  &--footer {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: rem(12);
+    color: var(--color-secondary);
   }
 }
