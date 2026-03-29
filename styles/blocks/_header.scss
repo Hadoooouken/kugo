@@ -9,11 +9,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+       @include mobile {
+      justify-content: center;
+    }
   }
 
   &__nav-wrapper {
     display: flex;
     column-gap: rem(30);
+
+             @include mobile-s {
+      flex-direction: column;
+      row-gap: rem(8);
+      align-items: center;
+    }
   }
 
   &__nav {
@@ -35,5 +45,9 @@
 
   &__contacts {
     font-size: rem(12);
+
+    @include mobile {
+      display: none;
+    }
   }
 }

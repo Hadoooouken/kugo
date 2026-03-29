@@ -12,6 +12,10 @@
     max-width: rem(448);
     font-size: rem(18);
     margin-inline-end: rem(75);
+
+    @include laptop-s {
+      margin-inline-end: 0;
+    }
   }
 
   &__form {
@@ -19,6 +23,13 @@
     justify-content: space-between;
     align-items: center;
     column-gap: rem(20);
+
+    @include laptop-s {
+      justify-content: center;
+      align-items: center;
+      row-gap: rem(15);
+      flex-direction: column;
+    }
   }
 
   &__input-inner {

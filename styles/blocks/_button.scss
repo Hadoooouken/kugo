@@ -8,6 +8,7 @@
   &--primary {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: var(--color-secondary);
     color: var(--color-light);
     column-gap: rem(14);
@@ -46,6 +47,12 @@
     padding: rem(12);
     height: 100%;
     border-radius: 0;
+  }
+
+  &--catalog {
+    @include mobile {
+      order: -2;
+    }
   }
 
   &--light {

@@ -1,16 +1,40 @@
 @use '../helpers' as *;
 
 .training {
+  margin-block-end: rem(100);
+
+  @include mobile {
+    margin-block-end: rem(40);
+  }
+  &--reverse {
+    margin-block-end: rem(100);
+
+    @include mobile {
+      margin-block-end: rem(40);
+    }
+  }
+
   &__wrapper {
     display: flex;
     justify-content: end;
     column-gap: rem(85);
-    margin-block-end: rem(100);
+
+    @include laptop-s {
+      flex-direction: column;
+      align-items: center;
+      row-gap: rem(20);
+    }
   }
 
   &__wrapper--reverse {
     flex-direction: row-reverse;
     justify-content: start;
+
+    @include laptop-s {
+      flex-direction: column;
+      align-items: center;
+      row-gap: rem(20);
+    }
   }
 
   &__content {

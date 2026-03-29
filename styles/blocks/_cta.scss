@@ -2,12 +2,23 @@
 
 .cta {
   margin-block-end: rem(100);
-  
+
+     @include mobile {
+        margin-block-end: rem(40);
+    }
+
   &__content {
-    padding-block-start: rem(86);
-    padding-block-end: rem(76);
-    padding-inline-start: rem(130);
+    padding: rem(86) 0 rem(76) rem(130);
     max-width: rem(740);
+
+    @include laptop-s {
+      padding: rem(44) 0 rem(66) rem(44) ;
+    max-width: rem(644);
+    }
+
+        @include tablet {
+         padding: rem(30); 
+    }
   }
 
   &__inner {
@@ -15,6 +26,10 @@
     display: flex;
     background-color: var(--color-light-cta);
     border-radius: 10px;
+
+      @include tablet {
+      justify-content: center;
+    }
   }
 
   &__title {
@@ -30,11 +45,25 @@
   &__input-box {
     column-gap: rem(20);
     margin-block-end: rem(20);
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: rem(20);
+      justify-content: center;
+    }
   }
 
   &__image {
     position: absolute;
     bottom: 0;
     right: rem(180);
+
+    @include breakpoint(1300) {
+      right: 0;
+    }
+
+    @include tablet {
+      display: none;
+    }
   }
 }
