@@ -37,7 +37,7 @@ $mobile-s: 480.98;
 }
 
 @mixin breakpoint($max) {
- @media (max-width: #{rem($max)}) {
+  @media (max-width: #{rem($max)}) {
     @content;
   }
 }

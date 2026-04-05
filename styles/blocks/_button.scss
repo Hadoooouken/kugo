@@ -13,6 +13,11 @@
     color: var(--color-light);
     column-gap: rem(14);
     font-weight: 500;
+    transition: background-color 0.2s;
+
+    @include hover {
+      background-color: var(--hover-primary);
+    }
   }
 
   &--sm {
@@ -58,6 +63,11 @@
   &--light {
     background-color: var(--color-light);
     color: var(--color-secondary);
+    transition: background-color 0.2s;
+
+    @include hover {
+      background-color: #ecf3ff;
+    }
   }
 
   &--transparent {
@@ -68,6 +78,11 @@
     font-weight: 500;
     font-size: rem(14);
     color: var(--color--dark);
+    transition: background-color 0.2s;
+
+    @include hover {
+      background-color: #ecf3ff;
+    }
   }
 
   &--corner {
@@ -76,6 +91,12 @@
     border-radius: 100%;
     border: var(--border);
     background-color: transparent;
+
+    transition: background-color 0.2s;
+
+    @include hover {
+      background-color: #ecf3ff;
+    }
   }
 
   &--bg-light {
@@ -106,5 +127,11 @@
     font-weight: 500;
     font-size: rem(12);
     color: var(--color-secondary);
+
+    transition: color 0.2s;
+
+    @include hover {
+      color: var(--hover-primary);
+    }
   }
 }

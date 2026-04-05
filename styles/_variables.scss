@@ -7,8 +7,9 @@
   --color-gray: #5d6c7b;
   --color-green: #75d14a;
   --color-red: #ee685f;
-  --color-light-gray: #eaebed; 
+  --color-light-gray: #eaebed;
   --color-light-cta: #f4f7fb;
+  --hover-primary: #0e7eef;
 
   --font-family-base: 'Jost', sans-serif;
   --font-family-accent: 'Roboto', sans-serif;
@@ -17,11 +18,10 @@
   --container-width-lg: #{rem(1380)};
   --container-padding-x: #{rem(30)};
   @include laptop-s {
-     --container-padding-x: #{rem(15)};
+    --container-padding-x: #{rem(15)};
   }
-  
-  --border: 1px solid #ecf3ff;
 
+  --border: 1px solid #ecf3ff;
 
   --transition-duration: 0.2s;
 }

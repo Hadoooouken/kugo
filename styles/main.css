@@ -148,11 +148,19 @@ button {
   (за исключением тех, у которых уже указан
   атрибут fill со значением 'none' или начинается с 'url')
  */
+:where([fill]:not([fill='none'], [fill^='url'])) {
+  fill: currentColor;
+}
+
 /**
   Приводим к единому цвету svg-элементы
   (за исключением тех, у которых уже указан
   атрибут stroke со значением 'none')
  */
+:where([stroke]:not([stroke='none'], [stroke^='url'])) {
+  stroke: currentColor;
+}
+
 /**
   Чиним баг задержки смены цвета при взаимодействии с svg-элементами
  */
@@ -183,36 +191,36 @@ svg * {
   }
 }
 @font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-Bold.woff2") format("woff2");
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-Medium.woff2") format("woff2");
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-Regular.woff2") format("woff2");
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-SemiBold.woff2") format("woff2");
+  font-family: 'Jost';
+  src: url('../fonts/Jost-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -226,6 +234,7 @@ svg * {
   --color-red: #ee685f;
   --color-light-gray: #eaebed;
   --color-light-cta: #f4f7fb;
+  --hover-primary: #0e7eef;
   --font-family-base: 'Jost', sans-serif;
   --font-family-accent: 'Roboto', sans-serif;
   --container-width: 69.375rem;
@@ -344,6 +353,17 @@ h4,
   text-decoration: none;
   font-size: 0.75rem;
   font-weight: 400;
+  transition: color 0.2s;
+}
+@media (any-hover: hover) {
+  .header__nav-link:hover {
+    color: var(--hover-primary);
+  }
+}
+@media (any-hover: none) {
+  .header__nav-link:active {
+    color: var(--hover-primary);
+  }
 }
 .header__contacts {
   font-size: 0.75rem;
@@ -361,6 +381,17 @@ h4,
 }
 .socials__link {
   color: var(--color-gray);
+  transition: color 0.2s;
+}
+@media (any-hover: hover) {
+  .socials__link:hover {
+    color: var(--hover-primary);
+  }
+}
+@media (any-hover: none) {
+  .socials__link:active {
+    color: var(--hover-primarry);
+  }
 }
 
 .contacts {
@@ -368,6 +399,17 @@ h4,
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
+  transition: color 0.2s;
+}
+@media (any-hover: hover) {
+  .contacts:hover {
+    color: var(--hover-primary);
+  }
+}
+@media (any-hover: none) {
+  .contacts:active {
+    color: var(--hover-primary);
+  }
 }
 
 .search {
@@ -437,6 +479,17 @@ h4,
   color: var(--color-light);
   column-gap: 0.875rem;
   font-weight: 500;
+  transition: background-color 0.2s;
+}
+@media (any-hover: hover) {
+  .button--primary:hover {
+    background-color: var(--hover-primary);
+  }
+}
+@media (any-hover: none) {
+  .button--primary:active {
+    background-color: var(--hover-primary);
+  }
 }
 .button--sm {
   padding: 0.5rem 1rem;
@@ -474,6 +527,17 @@ h4,
 .button--light {
   background-color: var(--color-light);
   color: var(--color-secondary);
+  transition: background-color 0.2s;
+}
+@media (any-hover: hover) {
+  .button--light:hover {
+    background-color: #ecf3ff;
+  }
+}
+@media (any-hover: none) {
+  .button--light:active {
+    background-color: #ecf3ff;
+  }
 }
 .button--transparent {
   display: flex;
@@ -483,6 +547,17 @@ h4,
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color--dark);
+  transition: background-color 0.2s;
+}
+@media (any-hover: hover) {
+  .button--transparent:hover {
+    background-color: #ecf3ff;
+  }
+}
+@media (any-hover: none) {
+  .button--transparent:active {
+    background-color: #ecf3ff;
+  }
 }
 .button--corner {
   width: 40px;
@@ -493,6 +568,17 @@ h4,
   border-radius: 100%;
   border: var(--border);
   background-color: transparent;
+  transition: background-color 0.2s;
+}
+@media (any-hover: hover) {
+  .button--corner:hover {
+    background-color: #ecf3ff;
+  }
+}
+@media (any-hover: none) {
+  .button--corner:active {
+    background-color: #ecf3ff;
+  }
 }
 .button--bg-light {
   width: 35px;
@@ -519,6 +605,17 @@ h4,
   font-weight: 500;
   font-size: 0.75rem;
   color: var(--color-secondary);
+  transition: color 0.2s;
+}
+@media (any-hover: hover) {
+  .button--footer:hover {
+    color: var(--hover-primary);
+  }
+}
+@media (any-hover: none) {
+  .button--footer:active {
+    color: var(--hover-primary);
+  }
 }
 
 .hero {
@@ -532,7 +629,9 @@ h4,
 }
 .hero__bg {
   padding: 3.625rem 8.5rem;
-  background: linear-gradient(42deg, #6f73ee 20%, rgba(111, 115, 238, 0) 67%), url("../../images/hero-bg.jpg") no-repeat center/cover;
+  background:
+    linear-gradient(42deg, #6f73ee 20%, rgba(111, 115, 238, 0) 67%),
+    url('../../images/hero-bg.jpg') no-repeat center/cover;
   border-radius: 0.625rem;
 }
 @media (width <= 63.99875rem) {
@@ -614,7 +713,7 @@ h4,
 }
 .hero__wrapper::after {
   position: absolute;
-  content: " ";
+  content: ' ';
   inset: 0;
   background-color: var(--color-light);
   opacity: 0.2;
@@ -687,6 +786,17 @@ h4,
   display: flex;
   align-items: center;
   column-gap: 0.625rem;
+}
+.training__item svg {
+  flex-shrink: 0;
+}
+.training__text {
+  font-size: clamp(0.875rem, 0.7821428571rem + 0.380952381vw, 1.125rem);
+}
+.training__icon {
+  flex-shrink: 0;
+  width: 1.375rem;
+  height: 1.375rem;
 }
 .training__text-strong {
   font-weight: 500;
@@ -832,8 +942,8 @@ h4,
 }
 .form__policy-box::before {
   position: absolute;
-  content: "";
-  background-image: url("../../images/checked.svg");
+  content: '';
+  background-image: url('../../images/checked.svg');
   background-repeat: no-repeat;
   width: 15px;
   height: 15px;
@@ -853,11 +963,25 @@ h4,
   column-gap: 30px;
   padding-inline-start: 2rem;
 }
-.form__policy-label, .form__policy-link {
+.form__policy-label,
+.form__policy-link {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.17;
   color: inherit;
+}
+.form__policy-link {
+  transition: color 0.2s;
+}
+@media (any-hover: hover) {
+  .form__policy-link:hover {
+    color: var(--hover-primary);
+  }
+}
+@media (any-hover: none) {
+  .form__policy-link:active {
+    color: var(--hover-primary);
+  }
 }
 
 .cta {
@@ -1038,6 +1162,17 @@ h4,
 .footer__link {
   color: var(--color-gray);
   text-decoration: none;
+  transition: color 0.2s;
+}
+@media (any-hover: hover) {
+  .footer__link:hover {
+    color: var(--hover-primary);
+  }
+}
+@media (any-hover: none) {
+  .footer__link:active {
+    color: var(--hover-primary);
+  }
 }
 .footer__contacts-item {
   display: flex;
@@ -1088,6 +1223,19 @@ h4,
 .footer__links {
   display: flex;
   column-gap: 2.75rem;
+}
+.footer__links a {
+  transition: color 0.2s;
+}
+@media (any-hover: hover) {
+  .footer__links a:hover {
+    color: var(--hover-primary);
+  }
+}
+@media (any-hover: none) {
+  .footer__links a:active {
+    color: var(--hover-primary);
+  }
 }
 .footer__badges {
   display: flex;
@@ -1140,6 +1288,23 @@ h4,
   font-weight: 400;
   font-size: 14px;
   color: var(--color-dark);
+}
+.footer__payment-link,
+.footer__badges-link {
+  border-radius: 5px;
+  transition: box-shadow 0.2s ease;
+}
+@media (any-hover: hover) {
+  .footer__payment-link:hover,
+  .footer__badges-link:hover {
+    box-shadow: 0 0 0 1px var(--hover-primary);
+  }
+}
+@media (any-hover: none) {
+  .footer__payment-link:active,
+  .footer__badges-link:active {
+    box-shadow: 0 0 0 1px var(--hover-primary);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

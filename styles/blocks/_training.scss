@@ -68,6 +68,20 @@
     display: flex;
     align-items: center;
     column-gap: rem(10);
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+
+  &__text {
+      @include fluid-text(18, 14);
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: rem(22); // можно через rem, чтобы масштабировать
+    height: rem(22);
   }
   &__text-strong {
     font-weight: 500;

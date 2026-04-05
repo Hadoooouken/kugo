@@ -1,12 +1,16 @@
 @use '../helpers' as *;
 
 .socials {
-    display: flex;
-    column-gap: rem(8);
-      align-items: center;
+  display: flex;
+  column-gap: rem(8);
+  align-items: center;
 
-    &__link {
-        color: var(--color-gray);
-        
+  &__link {
+    color: var(--color-gray);
+    transition: color 0.2s;
+
+    @include hover {
+      color: var(--hover-primary);
     }
+  }
 }

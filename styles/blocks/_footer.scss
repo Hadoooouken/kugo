@@ -62,6 +62,11 @@
   &__link {
     color: var(--color-gray);
     text-decoration: none;
+    transition: color 0.2s;
+
+    @include hover {
+      color: var(--hover-primary);
+    }
   }
 
   &__contacts-item {
@@ -116,6 +121,14 @@
   &__links {
     display: flex;
     column-gap: rem(44);
+
+    a {
+      transition: color 0.2s;
+
+      @include hover {
+        color: var(--hover-primary);
+      }
+    }
   }
 
   &__badges {
@@ -171,5 +184,15 @@
     font-weight: 400;
     font-size: 14px;
     color: var(--color-dark);
+  }
+
+  &__payment-link,
+  &__badges-link {
+    border-radius: 5px;
+    transition: box-shadow 0.2s ease;
+
+    @include hover {
+      box-shadow: 0 0 0 1px var(--hover-primary);
+    }
   }
 }

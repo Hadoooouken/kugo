@@ -4,9 +4,9 @@
   color: var(--color-light);
   margin-block-end: rem(70);
 
-      @include mobile {
-        margin-block-end: rem(40);
-    }
+  @include mobile {
+    margin-block-end: rem(40);
+  }
 
   &__bg {
     padding: rem(58) rem(136);
@@ -20,10 +20,10 @@
       padding: rem(58) rem(40);
     }
 
-       @include tablet {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
