@@ -36,7 +36,7 @@
                             </a>
                         </li>
                         <li class="socials__item">
-                            <a href="#" class="socials__link" >
+                            <a href="#" class="socials__link">
                                 <svg width="12" height="12" class="socials__icon">
                                     <use href="./images/sprite.svg#whatsup"></use>
                                 </svg>
@@ -60,7 +60,7 @@
             <div class="container">
                 <div class="search__wrapper">
                     <a href="#" class="logo search__logo">
-                        <img src="./images/logo.jpg" alt="" width="116" height="43">
+                        <img src="./images/logo.png" alt="" width="116" height="43">
                     </a>
                     <button class="button button--primary button--sm button--catalog">
                         <span class="button__icon">
@@ -208,7 +208,8 @@
                             <li class="training__item">
                                 <svg width="22" height="22">
                                     <use href="./images/sprite.svg#checked" class="training__icon"></use>
-                                </svg><span class="training__text">Как вести себя во время поездки и обезопасить себя и окружающих;</span>
+                                </svg><span class="training__text">Как вести себя во время поездки и обезопасить себя и
+                                    окружающих;</span>
 
                             </li>
                             <li class="training__item">
@@ -596,7 +597,7 @@
                 <div class="footer__socials-inner">
                     <div class="footer__badges">
                         <a href="#" class="logo footer__logo">
-                            <img src="./images/logo.jpg" alt="" width="116" height="43">
+                            <img src="./images/logo.png" alt="" width="116" height="43">
                         </a>
                         <a href="#" class="footer__badges-link"><svg width="152" height="45">
                                 <use href="./images/google-play.svg"></use>
@@ -711,6 +712,41 @@
             </div>
         </div>
     </footer>
+    <div class="popup">
+        <div class="popup__content">
+            <button class="popup__close button--transparent" type="button" aria-label="Закрыть"></button>
+            <div class="popup__description">
+                <div class="popup__content-top">
+                    <h2 class="popup__title">Запишитесь на тест-драйв электросамоката</h2>
+                    <p class="popup__subtitle">и подберите модель для себя</p>
+                    <p class="popup__text">Менеджер свяжется с вами в течение 5 минут, чтобы согласовать время.</p>
+                </div>
+                <div class="popup__content-bottom">
+                    <form class="form popup__form" action="#" method="post">
+                        <div class="form__box popup__input-box">
+                            <span class="popup__input-text">Как с вами удобнее связаться?</span>
+                            <label for="phone" class="visually-hidden">номер телефона</label>
+                            <input type="tel" class="form__input" id="phone" name="phone"
+                                placeholder="+7 (___) __ - __ - __">
+                            <button type="submit" class="button button--primary button--extra-lg">Оформить
+                                предзаказ</button>
+                        </div>
+                        <label for="policy-popup" class="form__policy-label">
+                            <input type="checkbox" id="policy-popup" name="policy" class="form__policy-input visually-hidden">
+
+                            <span class="form__policy-box popup__policy-box"></span>
+                            <span>Нажимая на кнопку, вы соглашаетесь на
+                                обработку
+                                персональных
+                                данных и <a class="form__policy-link form__policy-link--popup" href="#">политикой
+                                    конфиденциальности</a></span>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <img class="popup__image" src="./images/popup-image.jpg" alt="">
+        </div>
+    </div>
 </body>
 
 </html>

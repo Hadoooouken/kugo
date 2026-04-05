@@ -3,9 +3,9 @@
 .product {
   margin-block-end: rem(100);
 
-     @include mobile {
-        margin-block-end: rem(40);
-    }
+  @include mobile {
+    margin-block-end: rem(40);
+  }
 
   &__image-container {
     position: relative;
