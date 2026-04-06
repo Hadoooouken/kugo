@@ -945,7 +945,7 @@ h4,
 .form__policy-box::before {
   position: absolute;
   content: "";
-  background-image: url("../../images/checked.svg");
+  background-image: url("../images/checked.svg");
   background-repeat: no-repeat;
   width: 15px;
   height: 15px;
