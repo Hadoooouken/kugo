@@ -1,16 +1,21 @@
 @use '../helpers' as *;
 .popup {
-  display: none;
+  display: flex;
   position: fixed;
   inset: 0;
   justify-content: center;
   align-items: center;
   color: var(--color-dark);
   background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+ transition: opacity 0.3s ease, visibility 0.3s;
 
   &.is-open {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
   }
+  
 
   &__content {
     position: relative;
@@ -40,11 +45,10 @@
     }
 
     &::before {
-      transform: rotate(45deg);
+
       transform: translate(-35%, -50%) rotate(45deg);
     }
     &::after {
-      transform: rotate(-45deg);
       transform: translate(-35%, -50%) rotate(-45deg);
     }
   }
