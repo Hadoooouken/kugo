@@ -633,7 +633,7 @@ h4,
 }
 .hero__bg {
   padding: 3.625rem 8.5rem;
-  background: linear-gradient(42deg, #6f73ee 20%, rgba(111, 115, 238, 0) 67%), image-set(url("../../images/hero-bg.webp") type('image/webp'), url("../../images/hero-bg.jpg") type('image/jpeg')) center/cover no-repeat;
+  background: linear-gradient(42deg, #6f73ee 20%, rgba(111, 115, 238, 0) 67%), image-set(url("/images/hero-bg.webp") type('image/webp'), url("/images/hero-bg.jpg") type('image/jpeg')) center/cover no-repeat;
   border-radius: 0.625rem;
 }
 @media (width <= 63.99875rem) {
@@ -945,7 +945,7 @@ h4,
 .form__policy-box::before {
   position: absolute;
   content: "";
-  background-image: url("../images/checked.svg");
+  background-image: url("../../images/checked.svg");
   background-repeat: no-repeat;
   width: 15px;
   height: 15px;
