@@ -10,13 +10,16 @@
 
   &__bg {
     padding: rem(58) rem(136);
+    // background:
+    //   linear-gradient(42deg, #6f73ee 20%, rgba(111, 115, 238, 0) 67%),
+    //   image-set(
+    //       url('/images/hero-bg.webp') type('image/webp'),
+    //       url('/images/hero-bg.jpg') type('image/jpeg')
+    //     )
+    //     center / cover no-repeat;
     background:
       linear-gradient(42deg, #6f73ee 20%, rgba(111, 115, 238, 0) 67%),
-      image-set(
-          url('/images/hero-bg.webp') type('image/webp'),
-          url('/images/hero-bg.jpg') type('image/jpeg')
-        )
-        center / cover no-repeat;
+      url('/images/hero-bg.webp') type('image/webp');
     border-radius: rem(10);
 
     @include tablet {
